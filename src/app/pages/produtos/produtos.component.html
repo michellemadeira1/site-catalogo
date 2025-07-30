@@ -1,0 +1,33 @@
+<!-- MENU -->
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <mat-button-toggle-group
+    name="categorias"
+    appearance="legacy"
+    color="primary"
+    [value]="categoriaSelecionada"
+    (change)="onCategoriaChange($event.value)">
+
+    <mat-button-toggle value="todas">Todos</mat-button-toggle>
+    <mat-button-toggle value="cabelo">Cabelo</mat-button-toggle>
+    <mat-button-toggle value="cosmeticos">Cosméticos</mat-button-toggle>
+    <mat-button-toggle value="comida">Comida</mat-button-toggle>
+    <mat-button-toggle value="unhas">Unhas</mat-button-toggle>
+
+  </mat-button-toggle-group>
+</div>
+
+<div class="container">
+  <mat-card *ngFor="let produto of produtosFiltrados" class="produto-card">
+    <img mat-card-image [src]="produto.imagemUrl" alt="{{ produto.nome }}">
+    <mat-card-title>{{ produto.nome }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ produto.descricao }}</p>
+      <p><strong>R$ {{ produto.preco }}</strong></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button color="accent" [href]="gerarLinkWhatsapp(produto.nome)" target="_blank">
+        Falar com Márcia no WhatsApp
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,35 @@
+<div class="pagina-cadastro">
+  <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Produto</mat-label>
+      <input matInput formControlName="nome" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="descricao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preço</mat-label>
+      <input matInput type="number" formControlName="preco" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Categoria</mat-label>
+      <mat-select formControlName="categoria" required>
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <label for="imagem">Imagem do Produto:</label>
+    <input type="file" (change)="onImagemSelecionada($event)" />
+
+    <!-- Pré-visualização da imagem -->
+    <div *ngIf="imagemPreview" class="imagem-preview">
+      <img [src]="imagemPreview" alt="Pré-visualização da imagem" />
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Cadastrar Produto</button>
+  </form>
+</div>

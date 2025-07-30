@@ -1,0 +1,78 @@
+/* Adicione isso no topo do seu SCSS, ou no styles.scss global */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #b9545493;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #b9545493; // fundo escuro da tela
+  justify-items: center;
+
+}
+
+.produto-card {
+  width: 100%;
+  max-width: 320px;
+  background-color: #000000 !important; // fundo preto
+  color: #ffffff; // texto branco
+  border: 1px solid #2a2a2a; // borda fina
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  padding: 1rem; // espaçamento interno para não ficar colado
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); // sombra ciano
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0.5rem;
+  }
+
+  mat-card-subtitle {
+    font-size: 0.95rem;
+    color: #bbbbbb;
+    margin-bottom: 0.5rem;
+  }
+
+  mat-card-content p {
+    font-size: 1rem;
+    color: #00ffc8; // tom ciano vibrante
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    a {
+      text-transform: none;
+      font-weight: 600;
+      color: #000;
+      background-color: #00ffc8;
+    }
+  }
+}
