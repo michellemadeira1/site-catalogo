@@ -1,0 +1,29 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <h1>Entrar</h1>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Usuário</mat-label>
+      <input matInput type="text" placeholder="Digite seu usuário" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" placeholder="Digite sua senha" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="btn-login" type="button">
+      Entrar
+    </button>
+  </mat-card>
+
+  <div class="botoes-acao">
+    <button mat-stroked-button class="btn-voltar" [routerLink]="['/']" routerLinkActive="active">
+      Voltar para Home
+    </button>
+
+    <button mat-stroked-button class="btn-cadastrar"  [routerLink]="['/loginCadastro']" routerLinkActive="active">
+      Cadastrar Login
+    </button>
+  </div>
+</div>

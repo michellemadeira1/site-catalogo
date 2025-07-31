@@ -1,0 +1,31 @@
+<div class="cadastro-container">
+  <mat-card class="cadastro-card">
+    <h1>Cadastrar Login</h1>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Usuário</mat-label>
+      <input matInput type="text" placeholder="Digite seu nome de usuário" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" placeholder="Digite sua senha" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Confirmar Senha</mat-label>
+      <input matInput type="password" placeholder="Confirme sua senha" />
+    </mat-form-field>
+
+    <!-- Div para os botões com espaçamento -->
+    <div class="botoes-container">
+      <button mat-raised-button color="primary" class="btn-cadastrar">
+        Cadastrar
+      </button>
+
+      <button mat-stroked-button color="warn" class="btn-voltar" type="button" [routerLink]="['/']" routerLinkActive="active">
+        Voltar
+      </button>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,42 @@
+<!-- MENU -->
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <mat-button-toggle-group
+    name="categorias"
+    appearance="legacy"
+    color="primary"
+    [value]="categoriaSelecionada"
+    (change)="onCategoriaChange($event.value)">
+
+    <mat-button-toggle value="todas">Todos</mat-button-toggle>
+    <mat-button-toggle value="cabelo">Cabelo</mat-button-toggle>
+    <mat-button-toggle value="cosmeticos">Cosméticos</mat-button-toggle>
+    <mat-button-toggle value="comida">Comida</mat-button-toggle>
+    <mat-button-toggle value="unhas">Unhas</mat-button-toggle>
+
+  </mat-button-toggle-group>
+</div>
+
+<div class="container">
+  <mat-card *ngFor="let produto of produtosFiltrados" class="produto-card">
+    <img mat-card-image [src]="produto.imagemUrl" alt="{{ produto.nome }}">
+
+    <mat-card-title>{{ produto.nome }}</mat-card-title>
+
+    <mat-card-content>
+      <p>{{ produto.descricao }}</p>
+      <p><strong>R$ {{ produto.preco }}</strong></p>
+    </mat-card-content>
+
+   <mat-card-actions class="botoes-acoes">
+  <div class="grupo-botoes">
+    <button mat-icon-button color="primary" disabled>
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" disabled>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-card-actions>
+
+  </mat-card>
+</div>

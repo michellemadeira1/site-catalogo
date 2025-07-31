@@ -9,7 +9,15 @@
   min-height: 100vh; // ocupar a tela toda
 }
 
+  .header-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .home-header {
+  position: relative;
   text-align: center;
 
   h1 {
@@ -19,12 +27,33 @@
     font-weight: 700;
   }
 
+  .btn-adm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem 1rem 0 0;
+    background-color: #ff4d4d;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #cc3a3a;
+    }
+  }
+
   p {
     font-size: 1rem;
     color: #cccccc;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.4;
+    margin-top: 2.5rem; // para evitar sobreposição com o botão ADM
   }
 }
 
@@ -75,5 +104,33 @@
       background-color: #00b899;
       color: #fff;
     }
+  }
+
+   .btn-adm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff4d4d;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #cc3a3a;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-top: 2.5rem; // para evitar sobreposição com o botão ADM
   }
 }

@@ -4,11 +4,13 @@ import { MatCardModule } from '@angular/material/card'; // importe aqui
 import { MatButtonModule } from '@angular/material/button'; // se for usar botões
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-produtos',
   standalone: true,
-  imports: [CommonModule,MatCardModule, MatButtonModule,MatButtonToggleModule,HttpClientModule],
+  imports: [CommonModule,MatCardModule, MatButtonModule,MatButtonToggleModule,HttpClientModule,
+RouterLink,RouterLinkActive ],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.scss'
 })
